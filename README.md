@@ -6,7 +6,7 @@ dependencies** beyond the standard library.
 [![Tests](https://github.com/cobrapy-x/pyconvert-package/actions/workflows/tests.yml/badge.svg)](https://github.com/cobrapy-x/pyconvert-package/actions/workflows/tests.yml)
 [![PyPI](https://img.shields.io/pypi/v/pyconvertx.svg)](https://pypi.org/project/pyconvertx/)
 [![Python versions](https://img.shields.io/pypi/pyversions/pyconvertx.svg)](https://pypi.org/project/pyconvertx/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/cobrapy-x/pyconvert-package/blob/main/LICENSE)
 
 ## Install
 
@@ -270,9 +270,9 @@ pytest          # 1072 tests, including the docstring examples
 ruff check .
 ```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add a unit, and the
+See [CONTRIBUTING.md](https://github.com/cobrapy-x/pyconvert-package/blob/main/CONTRIBUTING.md) for how to add a unit, and the
 invariants the test suite enforces.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [LICENSE](https://github.com/cobrapy-x/pyconvert-package/blob/main/LICENSE).

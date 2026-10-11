@@ -22,3 +22,12 @@ Thumbs.db
 
 # VS Code settings
 .vscode/
+# Testing and tooling caches
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+env/

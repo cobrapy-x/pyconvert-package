@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyconvertx"
+version = "1.0.0"
+description = "A lightweight unit and number-base conversion library with no dependencies"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "cobrapy-x" }]
+keywords = [
+    "units",
+    "unit-conversion",
+    "measurement",
+    "convert",
+    "converter",
+    "temperature",
+    "metric",
+    "imperial",
+    "number-base",
+    "radix",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+# Intentionally empty: the library uses only the standard library.
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.5", "build", "twine"]
+
+[project.urls]
+Homepage = "https://github.com/cobrapy-x/pyconvert-package"
+Repository = "https://github.com/cobrapy-x/pyconvert-package"
+Issues = "https://github.com/cobrapy-x/pyconvert-package/issues"
+Changelog = "https://github.com/cobrapy-x/pyconvert-package/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+# Listed explicitly rather than auto-discovered, so that tests/ and examples/
+# can never be picked up as importable top-level packages.
+packages = ["pyconvert"]
+
+[tool.setuptools.package-data]
+pyconvert = ["py.typed"]
+
+[tool.pytest.ini_options]
+# Doctests in the package are part of the suite: the README examples and the
+# docstrings are the same examples, so they are checked rather than trusted.
+addopts = "--doctest-modules"
+testpaths = ["tests", "pyconvert"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "RUF"]
+# __all__ is grouped by purpose with comments, which reads better than
+# alphabetical order here.
+ignore = ["RUF022"]

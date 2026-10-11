@@ -1,0 +1,10 @@
+include LICENSE
+include README.md
+include CHANGELOG.md
+include CONTRIBUTING.md
+include conftest.py
+include pyconvert/py.typed
+recursive-include tests *.py
+recursive-include examples *.py
+global-exclude __pycache__
+global-exclude *.py[cod]
